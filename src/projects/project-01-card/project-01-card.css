@@ -1,0 +1,93 @@
+.card-container {
+    border: 1px solid #111;
+    border-radius: 10px 10px 0 0;
+    background-color: #2b2b2b;
+    box-shadow: 2px 0px 30px 1px #727272;
+    width: 25vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.image {
+    height: 300px;
+}
+
+.image img {
+    height: 300px;
+    width: 100%;
+}
+
+.back {
+    height: 300px;
+    width: 25vw;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(81, 81, 81, 0.5);
+}
+
+.image-container p {
+    color: #fff;
+    position: absolute;
+    z-index: 4;
+    font-size: 15vh;
+    writing-mode:sideways-rl;
+    margin: 10px 0px;
+}
+
+/*Cuerpo de la tarjeta (informacion)*/
+
+.description {
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.description span {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.description ul li, 
+.description a {
+    margin: 6px 10px;
+    list-style: none;
+    color: #fff;
+}
+
+.description p {
+    text-align: justify;
+    margin: 3px 10px;
+}
+
+/*Botones de redes sociales*/
+.social-media {
+    height: 100px;
+    justify-content: end;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.social-media img {
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.social-media img:hover {
+    transform: translateY(-3px);
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.instagram {
+    background-color: #962fbf;
+}
+
+.github {
+    background-color: #fff;
+}
