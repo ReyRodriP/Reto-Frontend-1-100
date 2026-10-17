@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/*--------Variables--------*/
+:root {
+--main-background: #0B0B0D;
+--second-background: #16171B;
+--cards: #202126;
+--borders: #3A3B42;
+--main-text: #F5F3EE;
+--secondary-text: #BEB8B2;
+--main-red: #D4323C;
+--hover-red: #F44355;
+--main-blue: #4D9DFF;
+--middle-view: #2d2d2d;
+--purple: #8C46FF;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

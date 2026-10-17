@@ -1,0 +1,564 @@
+.cuerpo {
+    background-color: var(--main-background);
+}
+/*Navbar*/
+header {
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.nav-bar {
+    background-color: var(--second-background);
+    height: 10vh;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ /*Parte izquierda*/
+.left-part {
+    display: flex;
+    background-color: var(--second-background);
+    align-items: center;
+}
+
+.left-part img {
+    width: 9vw;
+    width: 6vw;
+    border-radius: 3px;
+    
+}
+
+.left-part p {
+    margin: 0px 0px 0px 10px;
+    font-size: 3vh;
+    font-weight: bold;
+    color: var(--main-red);
+    background-color: var(--second-background);
+}
+
+.left-part .certification {
+    color: var(--main-text);
+    font-size: 15px;
+}
+
+.nav-text {
+    background-color: var(--second-background);
+}
+
+/*Parte derecha*/
+.right-part {
+    justify-content: end;
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+
+}
+
+.right-part ul {
+    list-style: none;
+    display: flex;
+    
+}
+
+.right-part ul li{
+    border: none;
+    font-weight: bold;
+    color: var(--main-red);
+    cursor: pointer;
+    transition: all .2s ease;
+    margin: .5rem;
+    font-size: 1em;
+}
+
+.right-part ul li:hover {
+    color: var(--main-text);
+}
+
+
+
+.right-part img {
+    width: 26vh;
+    background-color: var(--second-background);
+    margin: 6px;
+}
+
+/*Hero section*/
+.hero-section {
+    text-align: center;
+    color: var(--main-text);
+    height: 90vh;
+    margin-top: 20px;
+}
+.hero-section p {
+    font-size: 2.5vh;
+    margin: 15px 0 15px 0;
+}
+
+.hero-section li {
+    border: 1px solid var(--borders);
+}
+
+.hero-section img {
+    width: 30%;
+}
+
+.store-selection {
+    margin: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-selection p {
+    font-size: 2.5vh;
+}
+
+.store-selection button {
+    border: 2px solid var(--main-text);
+    color: var(--main-text);
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 2.5vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-background);
+}
+
+.store-selection button i{
+    font-size: 2em;
+}
+
+.store-selection button:nth-of-type(2) img{
+    width: 2vw;
+}
+
+.download-button button {
+    background-color: var(--main-red);
+    color: var(--main-text);
+    padding: 10px;
+    font-size: 3vh;
+    font-weight: bold;
+    border: 3px solid var(--secondary-text);
+    border-radius: 10px;
+    transition: ease .3s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.download-button button:hover {
+    background-color: var(--hover-red);
+    transform: scale(1.05);
+}
+
+.more-information span{
+    font-size: 3vh;
+    
+}
+
+.more-information i {
+    font-size: 8vh;
+    margin: 10px;
+}
+
+/*Contenido secundario de la pagina*/ 
+
+.main-content {
+    background-color: var(--middle-view);
+    padding: 4rem 1rem;
+}
+
+.description, .characteristics {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    max-width: 1200px;
+    margin: 0px auto 4rem;    
+}
+
+.description img, .characteristics img {
+    width: 50%;
+    max-width: 550px;
+    height: auto;
+}
+
+.description-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description p, .description h3,
+.characteristics h3, .characteristics li {
+    color: var(--main-text);
+    line-height: 1.7;
+}
+
+
+.characteristics ul li {
+    color: var(--main-text);
+    line-height: 1.7;
+}
+
+.characteristics-text h3{
+    text-align: center;
+}
+
+/*Detalles con GRID*/
+.game-details {
+    width: 100%;
+    min-height: 90vh;
+
+    color: var(--main-text);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 30%);
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+}
+
+.primary-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.details {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('/assets/img/skullgirls-mobile-20171224183857_6.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    padding: 1rem;
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.details:hover {
+    transform: translateY(-5px);
+}
+
+.extra-information {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('/assets/img/Skullgirls_Encore_Cast_Poster_purple_cross_key_art.webp');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+}
+
+.extra-information button {
+    opacity: 0;
+    visibility: hidden;
+    transition: ease .2s all;
+    color: var(--hover-red);
+    background-color: var(--main-text);
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.extra-information:hover button {
+    color: red;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Cartas de algunos de los personajes */
+
+.characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--middle-view);
+}
+
+.character {
+    background-color: var(--cards);
+    color: var(--main-text);
+    overflow: hidden;
+
+    min-height: 350px;
+    width: min(100%, 450px);
+
+    margin: 15px;
+    display: flex;
+    border-radius: 10px;
+    transition: ease .2s all;
+    
+}
+
+.character:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.character-details {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--secondary-text);
+    color: var(--cards);
+}
+
+.character-details span {
+    align-items: center;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
+
+.character-details P {
+    text-align: justify;
+}
+
+/*=====COMMMENTS SECTION======*/
+.comments {
+    color: var(--main-text);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.user-cards {
+    background-color: var(--middle-view);
+    border: 1px solid var(--borders);
+    border-radius: 10px;
+
+    width: min(100%, 320px);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: .3s ease;
+}
+
+.user-cards:hover {
+    transform: translateY(-5px);
+    border-color: var(--main-red);
+}
+
+.user-information h3 {
+    color: var(--main-text);
+    margin-top: 1rem;
+}
+
+.user-information p {
+    color: var(--main-red);
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.comment p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.image-container {
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: var(--purple);
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+footer {
+    background-color: var(--second-background);
+    color: var(--main-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left img {
+    max-width: 15rem;
+}
+
+.line-footer {
+    width: 2px;
+    height: 100px;
+    background-color: var(--borders);
+    margin: 0 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    font-size: 3rem;
+    color: var(--main-text);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Estilos para tablets*/
+
+@media (max-width: 1180px) {
+    /*Navbar*/
+
+    .left-part img {
+        width: 4em;
+    }
+
+    .right-part img{
+        display: none;
+    }
+    
+    .nav-text {
+        display: none;
+    }
+
+    .right-part ul li {
+        font-size: .8em;
+    }
+
+    /*Hero o contenido de bienvenida*/
+
+    .hero-section img {
+        width: 12em;
+    }
+
+    .store-selection button {
+        font-size: 1rem;
+    }
+
+    .store-selection button img {
+        width: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    /* Contenido principal */
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        color: red;
+    }
+
+    .left-content .description, .right-content .characteristics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-content img{
+        width: 90vw;
+        margin: 10px;
+    }
+
+    /*GRID*/
+
+    .game-details {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .extra-information {
+        min-height: 350px;
+    }
+}
+
+/* Version para mobiles mas pequenos */
+
+@media (max-width: 700px) {
+
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+    }
+
+    .line-footer {
+        width: 80%;
+        height: 2px;
+        margin: 1rem 0;
+    }
+
+    .social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-media p {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
