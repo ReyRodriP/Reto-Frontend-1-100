@@ -1,3 +1,18 @@
+:host {
+    display: block;
+}
+
+.proyecto-01-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+:host-context(.tema-oscuro) .proyecto-01-wrapper .card-container {
+    background-color: var(--main-background);
+    border-color: var(--borders);
+}
+
 .card-container {
     border: 1px solid #111;
     border-radius: 10px 10px 0 0;

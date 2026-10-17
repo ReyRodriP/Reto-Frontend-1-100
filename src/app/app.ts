@@ -11,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('OneToHundred');
+
+  protected readonly temaOscuro = signal(false);
+
+  protected toggleTema() {
+    this.temaOscuro.set(!this.temaOscuro());
+  }
 }
