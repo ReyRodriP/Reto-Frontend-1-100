@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /*--------Variables--------*/
 :root {
+    /*-----Skullgirls-----*/
 --main-background: #0B0B0D;
 --second-background: #16171B;
 --cards: #202126;
@@ -12,10 +13,16 @@
 --main-blue: #4D9DFF;
 --middle-view: #2d2d2d;
 --purple: #8C46FF;
+
+    /*-----Dashboard Gym-----*/
+--main-yellow: #FFB51B;
+--hover-yellow: #FFC94D;
+--cream: #FFD978;
+--table-shadow: 5px 10px 20px rgba(249, 249, 249, 0.08);
 }
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
