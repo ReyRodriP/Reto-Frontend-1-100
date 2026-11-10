@@ -10,3 +10,5 @@ export const routes: Routes = [
     { path: 'skullgirls', component: Project02Skullgirls},
     { path: 'dashboard', component: Project03Dashboard}
 ];
+
+export const routes: Routes = [];
