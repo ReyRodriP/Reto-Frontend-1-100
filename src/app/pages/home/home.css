@@ -1,0 +1,349 @@
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    min-height: 85vh;
+    padding: 6rem 1.5rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 15% 30%, #a900ff18, transparent 32%),
+        radial-gradient(circle at 85% 70%, #f0060b14, transparent 32%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 760px);
+    text-align: center;
+}
+
+/*Titulo principal*/
+
+.hero-eyebrow {
+    margin-bottom: 1rem;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.one-hundred {
+    display: block;
+    font-size: clamp(5rem, 12vw, 9rem);
+    line-height: 1;
+    background: linear-gradient(to right, #a900ff, #f72c8a, #f0060b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.frontend-tag {
+    color: #f72c8a;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    color: var(--secondary-text);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+/*Enlaces al github y repositorio*/
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--borders);
+    border-radius: 10px;
+    color: var(--main-text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 200ms ease, background-color 200ms ease;
+}
+
+.hero-link:hover {
+    transform: translateY(-3px);
+}
+
+.hero-link:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+} /*Estilos para cuando selecciones un enlace con el teclado*/
+
+.hero-link.primary {
+    border-color: transparent;
+    background: linear-gradient(110deg, #a900ff, #f72c8a, #f0060b);
+}
+
+.hero-link.secondary {
+    background-color: var(--second-background);
+}
+
+/*Imagenes de fondo*/
+.background-images {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background-images img {
+    position: absolute;
+    width: clamp(7rem, 16vw, 14rem);
+    height: auto;
+    opacity: 0.65;
+    animation: float 3.5s ease-in-out infinite alternate;
+}
+
+.angular-logo {
+    top: 16%;
+    left: 7%;
+}
+
+.typescript-logo {
+    right: 8%;
+    bottom: 14%;
+    animation-delay: -1.7s !important;
+    animation-duration: 4.2s !important;
+}
+
+/*Movimiento de las imagenes*/
+
+@keyframes float {
+    from { transform: translateY(-12px) }
+    to { transform: translateY(12px); }
+}
+
+/*Seccion de cards*/
+
+.cards-section {
+    padding: 5rem 1.5rem 7rem;
+}
+
+.cards-content {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.cards-heading {
+    margin-bottom: 2rem;
+}
+
+.cards-heading p {
+    margin-bottom: 0.5rem;
+    color: #f72c8a;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.cards-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--borders);
+    border-radius: 16px;
+    background-color: var(--second-background);
+    transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 2px solid var(--purple);
+}
+
+/*Estilo para las imagenes y su contenedor*/
+
+.card-media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--cards);
+}
+
+.card-media > img,
+.card-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card-slides {
+    width: 100%;
+    height: 100%;
+}
+
+/*Para ver solo la primera imagen por ahora*/
+.card-slides img:not(:first-child) {
+    display: none;
+}
+
+.card-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    background: #0b0b0dcc;
+    color: var(--main-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0.85rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.card-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffffff80;
+    box-shadow: 0 1px 4px #00000080;
+}
+
+.card-dots .active {
+    width: 19px;
+    border-radius: 999px;
+    background: #f72c8a;
+}
+
+/*Contenido de la carta*/
+
+.card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.4rem;
+}
+
+.card-body h3 {
+    font-size: 1.2rem;
+}
+
+.card-body > p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: auto 0 1rem 0;
+    padding-top: 1rem;
+    justify-content: space-around;
+}
+
+.card-links a {
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    color: var(--main-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-links a:hover {
+    border-color: var(--purple);
+}
+
+.card-links a:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+}
+
+.card-links .card-demo {
+    border-color: transparent;
+    background-color: var(--purple);
+}
+
+/*Responsive de la pagina*/
+
+@media (max-width: 700px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 6rem 1.25rem;
+    }
+
+    .background-images img {
+        width: 5rem;
+        opacity: 0.25;
+    }
+
+    .angular-logo {
+        top: 8%;
+        left: 5%;
+    }
+
+    .typescript-logo {
+        right: 5%;
+        bottom: 8%;
+    }
+}
+
+@media (max-width: 950px) {
+    .cards-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .cards-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background-images img {
+        animation: none;
+    }
+
+    .hero-link {
+        transition: none;
+    }
+} 
