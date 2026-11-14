@@ -42,70 +42,11 @@
         </div>
 
         <div class="cards-content">
-
-            <article class="card">
-                <div class="card-media">
-                    <span class="card-number">#03</span>
-                    <img src="img/3/Captura3.png" alt="Imagen del proyecto 3">
-                </div>
-
-                <div class="card-body">
-                    <h3>Dashboard para Gimnasio</h3>
-                    <p>Un panel de administración responsive para gestionar un gimnasio.</p>
-                </div>
-
-                <div class="card-links">
-                    <a href="https://github.com/100-frontend-projects/3.-Dashboard-de-Administraci-n-Gym.git" target="_blank" rel="noopener noreferrer">Repositorio</a>
-                    <a class="card-demo" href="https://100-frontend-projects.github.io/3.-Dashboard-de-Administraci-n-Gym/" target="_blank" rel="noopener noreferrer">Ver demo</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-media">
-                    <span class="card-number">#02</span>
-
-                    <div class="card-slides">
-                        <img src="img/2/Captura2.0.png" alt="Imagen del proyecto 2">
-                        <img src="img/2/Captura2.1.png" alt="Imagen del proyecto 2">
-                        <img src="img/2/Captura2.2.png" alt="Imagen del proyecto 2">
-                    </div>
-
-                    <div class="card-dots" aria-hidden="true">
-                        <span class="active"></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <h3>Landing Page Skullgirls</h3>
-                    <p>Una landing page para descubrir el universo del videojuego Skullgirls.</p>
-                </div>
-
-                <div class="card-links">
-                    <a href="https://github.com/100-frontend-projects/Landing-Page-Skullgirls.git" target="_blank" rel="noopener noreferrer">Repositorio</a>
-                    <a class="card-demo" href="https://100-frontend-projects.github.io/Landing-Page-Skullgirls/" target="_blank" rel="noopener noreferrer">Ver demo</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-media">
-                    <span class="card-number">#01</span>
-                    <img src="img/1/Captura1.png" alt="Vista previa de la carta moderna">
-                </div>
-
-                <div class="card-body">
-                    <h3>Carta moderna</h3>
-                    <p>Una tarjeta de presentación con un diseño limpio y moderno.</p>
-                </div>
-
-                <div class="card-links">
-                    <a href="https://github.com/100-frontend-projects/modern_card.git" target="_blank" rel="noopener noreferrer">Repositorio</a>
-                    <a class="card-demo" href="https://100-frontend-projects.github.io/modern_card/" target="_blank" rel="noopener noreferrer">Ver demo</a>
-                </div>
-            </article>
-
+            @for (project of projects; track project.id) {
+                <app-project-card [project]="project" />
+            }
         </div>
+
     </div>
 </section>
 

@@ -1,0 +1,184 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--borders);
+    border-radius: 16px;
+    background-color: var(--second-background);
+    transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 2px solid var(--purple);
+}
+
+/*Estilo para las imagenes y su contenedor*/
+
+.card-media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--cards);
+}
+
+.card-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 350ms ease;
+}
+
+.card-slides img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #ffffff50;
+    border-radius: 50%;
+    background: #0b0b0dcc;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.card-arrow.previous {
+    left: 0.75rem;
+}
+
+.card-arrow.next {
+    right: 0.75rem;
+}
+
+
+.card-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    background: #0b0b0dcc;
+    color: var(--main-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0.85rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    z-index: 2;
+}
+
+.card-dots .active {
+    width: 19px;
+    border-radius: 999px;
+    background: #f72c8a;
+}
+
+.card-dots button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff80;
+    box-shadow: 0 1px 4px #00000080;
+    cursor: pointer;
+}
+/*Contenido de la carta*/
+
+.card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.4rem;
+}
+
+.card-body h3 {
+    font-size: 1.2rem;
+}
+
+.card-body > p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: auto 0 1rem 0;
+    padding-top: 1rem;
+    justify-content: space-around;
+}
+
+.card-links a {
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    color: var(--main-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-links a:hover {
+    border-color: var(--purple);
+}
+
+.card-links a:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+}
+
+.card-links .card-demo {
+    border-color: transparent;
+    background-color: var(--purple);
+}
+
+.card-arrow:hover,
+.card-arrow:focus-visible,
+.card-dots button:focus-visible {
+    outline: 2px solid #f72c8a;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-slides {
+        transition: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .cards-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .cards-content {
+        grid-template-columns: 1fr;
+    }
+}
