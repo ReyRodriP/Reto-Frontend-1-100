@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Project, ProjectCard } from '../../components/project-card/project-card';
+import { Footer } from '../../components/footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [ProjectCard],
+  imports: [ProjectCard, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
