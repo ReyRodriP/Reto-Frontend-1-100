@@ -11,6 +11,16 @@ import { Footer } from '../../components/footer/footer';
 export class Home {
   projects: Project[] = [
     {
+      id: 4,
+      title: 'Gestor de tareas',
+      description: 'Gestor de tareas para hacer anotaciones rápidas y tener seguimiento del plazo previamente registrado',
+      images: [
+        'img/4/Captura1.png'
+      ],
+      repository: 'https://github.com/100-frontend-projects/4-Gestor-de-tareas.git',
+      demo: 'https://100-frontend-projects.github.io/4-Gestor-de-tareas/'
+    },
+    {
       id: 3,
       title: 'Dashboard para Gimnasio',
       description: 'Un panel de administración responsive para gestionar un gimnasio.',
